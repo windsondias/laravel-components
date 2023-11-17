@@ -1,0 +1,28 @@
+{
+    "name": "windsondias/laravel-components",
+    "description": "A laravel package with tailwind and alpine components",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Windsondias\\LaravelComponents\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "role": "Developer",
+            "name": "Windson Dias",
+            "email": "windson.dsantos@outlook.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^10.32"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WindsonDias\\LaravelComponents\\ComponentServiceProvider"
+            ]
+        }
+    }
+}
