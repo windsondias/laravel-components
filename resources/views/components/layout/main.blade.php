@@ -9,7 +9,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     {{--    With Laravel Modules--}}
-    {{--    {{ Vite::withEntryPoints(['Resources/assets/css/app.css', 'Resources/assets/js/app.js'])->useBuildDirectory('build-admin')  }}--}}
+    {{--    {{ Vite::withEntryPoints(['Resources/assets/css/app.css', 'Resources/assets/js/app.js'])->useBuildDirectory('build-module-name')  }}--}}
 
     @stack('styles')
 
