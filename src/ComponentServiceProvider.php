@@ -1,15 +1,25 @@
 <?php
 
-namespace Windsondias\LaravelComponents;
+namespace WindsonDias\Components;
 
 use Illuminate\Support\ServiceProvider;
 
 class ComponentServiceProvider extends ServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
-        var_dump('test');
-        die();
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'components');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'components');
+
+        $this->configurePublishing();
+    }
+
+    public function configurePublishing(): void
+    {
+        if (!$this->app->runningInConsole())
+            return;
+
+        $this->publishes([
+            __DIR__ . '/../resources/views' => resource_path('views/vendor/components'),
+        ]);
     }
 }
