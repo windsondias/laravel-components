@@ -2,6 +2,8 @@
 
 #### To use this package, you must have TailwindCss and AlpineJs installed in the project.
 
+#### The icon library used in the package is remixicon.com
+
 ### Installation
 
 Use the composer command:
@@ -72,6 +74,14 @@ Include the code below in your tailwind.config.js:
             }
         },
     },
+
+It is also necessary to add the relative path to the package folder in tailwind.config.js within the content key, starting from the vendor folder:
+    
+    content: [
+        "./resources/**/*.blade.php",
+        "./resources/**/*.js",
+        "./vendor/windsondias/laravel-components/**/*.blade.php",
+    ],
 
 After this configuration, only the sidebar and navbar components will not work, as they depend on the use of the layout available with the components.
 
