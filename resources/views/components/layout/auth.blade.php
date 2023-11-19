@@ -25,7 +25,7 @@
 <section class="antialiased">
     <div class="flex flex-col items-center justify-center gap-3 px-6 mx-auto h-screen">
         <div class="flex items-center text-2xl font-semibold text-gray-900 dark:text-white">
-            <img class="h-16" src="{{asset('images/logos/marcosoft.png')}}" alt="">
+            <img class="h-16" src="#" alt="">
         </div>
         <div class="w-full bg-white rounded-lg shadow dark:border sm:max-w-md dark:bg-gray-800 dark:border-gray-700 dark:text-white">
             {{ $slot }}
