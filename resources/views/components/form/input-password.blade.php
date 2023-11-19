@@ -1,17 +1,9 @@
 @props([
-    'prepend' => '',
-    'append' => '',
     'disabled' => false,
 ])
 
 <div>
-    <div class="relative">
-        @if(!empty($prepend))
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none text-gray-500 dark:text-gray-400">
-                {{$prepend}}
-            </div>
-        @endif
-
+    <div x-data="{show: false}" class="relative">
         <input
             {{ $attributes }}
             {{ $disabled ? 'disabled' : '' }}
@@ -22,15 +14,13 @@
                 'p-0.5 h-10' => $attributes->get('type') == 'color',
                 'cursor-not-allowed text-gray-600 dark:text-gray-300 bg-gray-200 dark:bg-gray-600' => $disabled,
                 'border-red-300 dark:border-red-600' => $errors->has($attributes->whereStartsWith('wire:model')->first()),
-            ])->merge([
-                'type' => 'text'
             ]) }}
+            :type="show ? 'text' : 'password'"
+            type="password"
         >
-
-        @if(!empty($append))
-            <div class="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none text-gray-500 dark:text-gray-400">
-                {{$append}}
-            </div>
-        @endif
+        <div class="absolute inset-y-0 end-0 flex items-center pe-3.5 text-gray-500 dark:text-gray-400 hover:text-gray-600 hover:dark:text-gray-500 cursor-pointer">
+            <i @click="show = true" :class="!show ? 'block' : 'hidden'" class="ri-eye-fill ri-lg "></i>
+            <i @click="show = false" :class="show ? 'block' : 'hidden'" class="ri-eye-off-fill ri-lg "></i>
+        </div>
     </div>
 </div>
