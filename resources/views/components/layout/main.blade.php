@@ -21,9 +21,9 @@
         }
     </script>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900">
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-white">
 
-<div class="antialiased dark:text-white h-auto min-h-screen">
+<div class="antialiased h-auto min-h-screen">
     <x-components::app.navbar/>
 
     <x-components::app.sidebar/>
