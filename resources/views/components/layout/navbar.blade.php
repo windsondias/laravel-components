@@ -18,14 +18,9 @@
         </x-components::button>
         <x-components::dropdown align="right">
             <x-components::dropdown.button>
-                <span class="sr-only">Open user menu</span>
-                @if(!empty(auth()->user()))
-                    <img src="{{ asset(auth()->user()->avatar) }}" class="rounded-full w-8 h-8" alt="avatar">
-                @else
-                    <div class="flex items-center justify-center w-8 h-8 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
-                        <i class="ri-user-fill ri-lg"></i>
-                    </div>
-                @endif
+                <div class="w-8">
+                    <x-components::avatar :src="!empty(auth()->user()->avatar) ? asset(auth()->user()->avatar) : ''" />
+                </div>
             </x-components::dropdown.button>
             <x-slot:items>
                 <x-components::dropdown.header>
