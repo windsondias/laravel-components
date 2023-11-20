@@ -1,8 +1,11 @@
+@props([
+    'href' => '#'
+])
+
 <a
+        href="{{$href}}"
         {{ $attributes->class([
             '',
-        ])->merge([
-            'href' => '#'
         ]) }}
 >
     {{$slot}}
