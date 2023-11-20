@@ -1,4 +1,4 @@
-<x-components::card class="space-y-4 sm:px-8">
+<x-components::card class="space-y-4 sm:px-8 pb-8">
     <x-components::loading />
     <h1 class="text-2xl font-bold">Faça login na sua conta</h1>
     <x-components::form wire:submit="submit">
