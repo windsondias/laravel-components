@@ -1,9 +1,8 @@
 <a
-        href="{{$href}}"
         {{ $attributes->class([
             '',
         ])->merge([
-            'type' => '#'
+            'href' => '#'
         ]) }}
 >
     {{$slot}}
