@@ -8,7 +8,7 @@
     <div class="relative">
         @if(!empty($prepend))
             <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none text-gray-500 dark:text-gray-400">
-                {{$prepend}}
+                {!! $prepend !!}
             </div>
         @endif
 
@@ -29,7 +29,7 @@
 
         @if(!empty($append))
             <div class="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none text-gray-500 dark:text-gray-400">
-                {{$append}}
+                {!! $append !!}
             </div>
         @endif
     </div>
